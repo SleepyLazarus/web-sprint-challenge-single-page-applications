@@ -70,13 +70,13 @@ const OrderForm = () =>{
                         <div onClick={() => {
                            toggle();
                            setFormData({...formData, size: 'Triangle'})}}> 
-                            Sma(e)lly</div>
+                            Triangle</div>
                             <div onClick={() => {
                            toggle();
-                           setFormData({...formData, size: 'Medium'})}}> Big round pizza</div>
+                           setFormData({...formData, size: 'Medium'})}}> Medium</div>
                         <div onClick={() => {
                            toggle();
-                           setFormData({...formData, size: 'Large'})}}>Surprise shape</div>
+                           setFormData({...formData, size: 'Large'})}}>Large</div>
                         <div onClick={() => {
                            toggle();
                            setFormData({...formData, size: 'Extra large'})}}>Extra Large</div>
@@ -125,7 +125,7 @@ const OrderForm = () =>{
             <FormGroup check>
             <Label check>
                     <Input type='checkbox' name='toppings' data-cy='checkbox1' checked={formData.Pepperoni} onChange={handleToppings}/>
-                    Pe-pe-ro-ni
+                    Peperoni
                 </Label>
             </FormGroup>
             
@@ -133,51 +133,51 @@ const OrderForm = () =>{
             <FormGroup check>
             <Label check>
                     <Input type='radio' name='toppings' data-cy='checkbox2'  checked={formData.Sausage} onChange={handleToppings}/>
-                    Sa-USA-ge
+                    Sausage
                 </Label>
             </FormGroup>
 
             <FormGroup check>
             <Label check>
                     <Input type='checkbox' name='toppings' data-cy='checkbox3'  checked={formData.Meatball} onChange={handleToppings}/>
-                    Meat......balls
+                    Meatballs
                 </Label>
             </FormGroup>
 
             <FormGroup check>
             <Label check>
                     <Input type='radio' name='toppings' data-cy='checkbox4'  checked={formData.Ham} onChange={handleToppings}/>
-                    Ha.....m
+                    Ham
                 </Label>
             </FormGroup>
 
             <FormGroup check>
             <Label check>
                     <Input type='checkbox' name='toppings' data-cy='checkbox5'  checked={formData.Bacon} onChange={handleToppings}/>
-                    Ba...con
+                    Bacon
                 </Label>
             </FormGroup>
 
             <FormGroup check>
             <Label check>
                     <Input type='radio' name='toppings' data-cy='checkbox6'  checked={formData.Chicken} onChange={handleToppings}/>
-                    Mix of everything. Mostly chicken tho!
+                    Gimme everything.
                 </Label>
             </FormGroup>
 
             <FormGroup check>
             <Label check>
                     <Input type='checkbox' name='toppings' data-cy='checkbox7'  checked={formData.Beef} onChange={handleToppings}/>
-                    Bee....f!
+                    Beef!
                 </Label>
             </FormGroup>
             </FormGroup>
             <FormGroup>
                 <legend>
-                    Special instructions: (Dont write anything. We dont listen to our customers!)
+                    Special instructions: 
                     <Input type='textarea' name='special' value={formData.special} onChange={handleChange}/>
 
-                    Customer feedback (Dont bother. We never read it)
+                    Customer feedback
                     <Input type='textarea' name='special' value={formData.special} onChange={handleChange}/>
                 </legend>
             </FormGroup>

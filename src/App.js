@@ -1,33 +1,34 @@
-import React, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import NavBar from './Components/NavBar';
-import PizzaForm from './Components/PizzaForm';
-import HomePage from './Components/HomePage';
-import styled from 'styled-components';
+import React from "react";
+import { Button, Navbar, Card } from 'reactstrap';
+import { Route, Link } from 'react-router-dom';
+import OrderForm from './Form.js'
 
 const App = () => {
-  const [orders, setOrders] = useState([]);
-
-  const addOrder = order => {
-    setOrders([...orders, order]);
-  }
   return (
-      <AppContainer>
-        <NavBar />
-        <Switch>
-          <Route path='/buildapizza'>
-            <PizzaForm addOrder={addOrder} />
-          </Route>
-          <Route exact path = '/'>
-            <HomePage orders={orders} />
-          </Route>
-        </Switch>
-      </AppContainer>
+    <>
+    <Navbar color='blue'>
+      <h1 style={{ color: 'white', margin: '0 auto' }}>Lambda Eats</h1>
+      <Link to={'/'}>
+        <Button color='blue'>
+          Home
+        </Button>
+      </Link>
+    </Navbar>
+    <Route exact path='/'>
+      <Card>
+        <Link to={'./pizza'}>
+          <Button color='info' style={{position: 'absolute', left: '50%', top: '50%'}}>
+            Pizza
+          </Button>
+        </Link>
+      </Card>
+    </Route>
+    
+    <Route path='/pizza'>
+      <OrderForm/>
+    </Route>
+    
+    </>
   );
 };
-
-const AppContainer = styled.div`
-  background: ghostwhite;
-`
-
 export default App;
